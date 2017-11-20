@@ -13,6 +13,7 @@ Tháng 11:
         + Mảng array ( các kiểu mảng, các thao tác về mảng, một số hàm thường sử dụng trong mảng...)
         + Class & object ( Đang nghiên cứu thêm )
     * Tuần 3:
+        + If-else, foreach, switch-case, for loop, while loop, do while loop, break. ( đang nghiên cứu thêm )
         + Mảng array ( các kiểu mảng, các thao tác về mảng, một số hàm thường sử dụng trong mảng...)
         + String, Integer, boolean,...
         + Class & object ( Đang nghiên cứu thêm )
