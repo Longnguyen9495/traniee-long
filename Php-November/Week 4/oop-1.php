@@ -1,4 +1,12 @@
 <?php
+function strlenProduct()
+{
+    for ($x =  0; $x >= 1; $x++)
+    {
+        return $x;
+    }
+}
+
 function array_counti_value($key)
 {
     $newArray = array();
@@ -32,15 +40,38 @@ print_r(array_counti_value($newName));
     }
     echo $num;
 ?>
+<br>
 <?php
-    function factorialProgram($arrayNumber)
+    function arrayCountNumber()
     {
-        $factorial = 1;
-        for($x = $arrayNumber; $x >=1; $x--)
-        {
-            $factorial = $arrayNumber * $x;
-        }
-        echo "Factorial của $arrayNumber là $factorial";
+        $number = array();
+        count($number);
     }
-    print_r(factorialProgram(100))
+    $x = array("ádas"=>12, "ádass"=>1223, "aádas"=>1232, "ádadss"=>1223);
+    print_r(arrayCountNumber($x));
 ?>
+<?php
+for($i=5; $i>=1; $i--)
+{
+    if($i%2 != 0)
+    {
+        for($j=5; $j>=$i; $j--)
+        {
+            echo "* ";
+        }
+        echo "<br>";
+    }
+}
+for($i=2; $i<=5; $i++)
+{
+    if($i%2 != 0)
+    {
+        for($j=5; $j>=$i; $j--)
+        {
+            echo "* ";
+        }
+        echo "<br>";
+    }
+}
+?>
+
