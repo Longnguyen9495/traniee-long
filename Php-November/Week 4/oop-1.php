@@ -32,3 +32,15 @@ print_r(array_counti_value($newName));
     }
     echo $num;
 ?>
+<?php
+    function factorialProgram($arrayNumber)
+    {
+        $factorial = 1;
+        for($x = $arrayNumber; $x >=1; $x--)
+        {
+            $factorial = $arrayNumber * $x;
+        }
+        echo "Factorial của $arrayNumber là $factorial";
+    }
+    print_r(factorialProgram(100))
+?>
