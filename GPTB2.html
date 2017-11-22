@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Giải phương trình bậc 2</title>
+	<style type="text/css">
+
+		font{
+			font-size: 25px;
+			color: #FFFFFF;
+		}
+		.hleft{
+			float: left;
+			width: 120px;
+			text-align: left;
+			height: 30px;
+		}
+		.hright{
+			float: right;
+			text-align: left;
+			width: 350px;
+			height: 30px;
+		}
+	</style>
+	<script type="text/javascript">
+	//xử lý khi click vào 'Giải phương trình' bắt xự kiện qua onclick của tag input
+	function GPT()
+	{
+		//khai báo các biến của phương trình bậc 2
+		var nghiem1="x1=";
+		var nghiem2="x2=";
+		var x1, x2;
+		var a, b, c, delta;
+		//Lấy thông tin từ người dùng nhập qua tag input
+		var a=parseFloat(document.getElementById("a").value);
+		var b=parseFloat(document.getElementById("b").value);
+		var c=parseFloat(document.getElementById("c").value);
+		//Gán biến delta theo công thức toán học
+		delta=(b*b-4*a*c);
+		//Kiểm tra từng điều kiện có thể xảy ra.
+		/*Điều kiện để 1 phương trình là phương trình bậc 2 thì a phải khác 0 nếu = 0 thì đó không phải là phương trình bậc 2*/
+		if(a==0)
+		{
+			alert('Không phải là phương trình bậc 2');
+		}
+		/*Điều kiện delta =0 thì phương trình có nghiệm kép*/
+		else if (delta==0) 
+		{
+			alert('phương trình có nghiệm kép:');
+			x1=-b/2*a;
+			x2=-b/2*a;
+			document.getElementById("x").value = nghiem1 + eval(x1);
+			document.getElementById("y").value = nghiem2 + eval(x2);
+		}
+		/*Điều kiện delta < 0 thì phương trình vô nghiệm*/
+		else if (delta<0)
+		{
+			alert('Phương trình vô nghiệm');
+		}
+		/* Nếu phương trình không có các điều kiện trên thì tức là delta > 0 phương trình có 2 nghiệm phân biệt*/
+		else
+		{
+			alert('Phương trình có 2 nghiệm phân biệt:');
+			x1=(-b-Math.sqrt(delta))/(2*a);		
+			x2=(-b+Math.sqrt(delta))/(2*a);
+			document.getElementById("x").value = nghiem1 + eval(x1.toFixed(3));
+			document.getElementById("y").value = nghiem2 + eval(x2.toFixed(3));
+		}
+	}
+	</script>
+</head>
+<body>
+<center>
+<div style="width: 500px; text-align: center; height: 150px; background-color: #66ccff;">
+	<div style="background-color: #ff6600"><font>Giải Phương trình bậc 2</font></div>
+	<div>
+	<table>
+		<tr>
+			<td class="hleft">Phương trình:</td>
+			<td class="hright"><input type="text" id="a" size="5px"> x<sup>2</sup> +
+			<input type="text" id="b" size="5px"> x
+			<input type="tex" id="c" size="5px"> = 0</td>
+		</tr>
+		<tr>
+			<td class="hleft">Nghiệm:</td>
+			<td class="hright"><input type="text" id="x" size="13px"  value="">  
+			<input type="text" id="y" size="14px"  value=""></td>
+		</tr>
+		<tr>
+			<td colspan="2" height="60px"><input type="button" id="giai" value="Giải phương trình" onclick="GPT();"></td>
+		</tr>
+	</table>
+	</div>
+</div>
+</center>
+</body>
+</html>
