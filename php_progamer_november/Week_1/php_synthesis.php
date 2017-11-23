@@ -1,11 +1,5 @@
 <?php
     // Php example
-    echo '<h3>Php echo, print</h3>';
-    $name = 'Nguyễn Thành Long';
-    # Echo : Có thể xuất ra được một hoăc nhiều chuỗi
-    echo 'Xin Chào ! tên tôi là'.' '.$name.'<br>';
-    # Print : chỉ xuất ra được môt chuổi và luôn trả về 1
-    print "Xin chào ! tên tôi là $name";
     echo '<h3>Php Variable</h3>';
     // Variable: String, integer, float
         $varialbeString = 'My name is Long';
